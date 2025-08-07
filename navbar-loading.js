@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createNavbar() {
         const navbar = document.createElement('nav');
         navbar.id = 'navbar';
-        navbar.className = 'fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50';
+        navbar.className = 'fixed top-0 left-0 right-0 z-50';
         navbar.style.height = navbarHeight;
         navbar.style.opacity = '0';
         document.body.prepend(navbar);
@@ -72,11 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Define the navigation tabs to be used in both states
         const navTabs = `
-            <div class="flex items-center space-x-2 sm:space-x-6 text-sm text-gray-600">
-                <a href="#" class="px-3 py-2 rounded-md hover:bg-gray-100 hover:text-black transition-colors">Dashboard</a>
-                <a href="#" class="px-3 py-2 rounded-md hover:bg-gray-100 hover:text-black transition-colors">Soundboard</a>
-                <a href="#" class="px-3 py-2 rounded-md hover:bg-gray-100 hover:text-black transition-colors">Games</a>
-                <a href="#" class="px-3 py-2 rounded-md hover:bg-gray-100 hover:text-black transition-colors">Others</a>
+            <div class="flex items-center space-x-2 sm:space-x-6 text-sm text-gray-400">
+                <a href="#" class="px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition-colors">Dashboard</a>
+                <a href="#" class="px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition-colors">Soundboard</a>
+                <a href="#" class="px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition-colors">Games</a>
+                <a href="#" class="px-3 py-2 rounded-md hover:bg-gray-700 hover:text-white transition-colors">Others</a>
             </div>
         `;
 
@@ -86,30 +86,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="navbar-container h-full flex items-center justify-between px-4 sm:px-8">
                     <div class="flex items-center space-x-4 sm:space-x-8">
                         <div class="flex items-center space-x-3">
-                            <svg width="24" height="24" viewBox="0 0 75 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.592 0L74.634 64.498H0.55L37.592 0Z" fill="black"></path></svg>
+                            <svg width="24" height="24" viewBox="0 0 75 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.592 0L74.634 64.498H0.55L37.592 0Z" fill="white"></path></svg>
                             <div class="flex flex-col">
-                                <span class="font-semibold text-lg leading-tight">4SP v4</span>
-                                <span class="text-xs text-gray-500 leading-tight">Student Multi-Tool Platform</span>
+                                <span class="font-semibold text-lg leading-tight text-white" style="font-family: 'Impact', sans-serif;">4SP V5</span>
+                                <span class="text-xs text-gray-400 leading-tight">Student Multi-Tool Platform</span>
                             </div>
                         </div>
                         <div class="hidden md:flex">${navTabs}</div>
                     </div>
                     <div class="relative">
-                        <button id="account-button" class="w-9 h-9 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors">
+                        <button id="account-button" class="w-9 h-9 bg-gray-700 rounded-full flex items-center justify-center font-bold text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white transition-colors">
                            S
                         </button>
-                        <div id="account-menu" class="account-menu menu-hidden absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
-                            <div class="px-4 py-3 border-b border-gray-200">
-                                <p class="text-sm font-semibold text-gray-800 truncate">student@school.edu</p>
-                                <p class="text-xs text-gray-500">StudentUsername</p>
+                        <div id="account-menu" class="account-menu menu-hidden absolute right-0 mt-2 w-64 bg-gray-800 rounded-md shadow-lg border border-gray-700 py-1 z-50">
+                            <div class="px-4 py-3 border-b border-gray-700">
+                                <p class="text-sm font-semibold text-white truncate">student@school.edu</p>
+                                <p class="text-xs text-gray-400">StudentUsername</p>
                             </div>
-                            <div class="px-4 py-2 text-xs text-gray-500 border-b border-gray-200">
-                                Joined on Aug 07, 2025
+                            <div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-700">
+                                Joined on Jan 01, 2026
                             </div>
-                            <a href="#" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dashboard</a>
-                            <a href="#" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                            <div class="border-t border-gray-200 mt-1 pt-1">
-                                <button id="logout-btn" class="w-full text-left block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</button>
+                            <a href="#" class="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Dashboard</a>
+                            <a href="#" class="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Settings</a>
+                            <div class="border-t border-gray-700 mt-1 pt-1">
+                                <button id="logout-btn" class="w-full text-left block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Logout</button>
                             </div>
                         </div>
                     </div>
@@ -121,16 +121,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="navbar-container h-full flex items-center justify-between px-4 sm:px-8">
                      <div class="flex items-center space-x-4 sm:space-x-8">
                         <div class="flex items-center space-x-3">
-                            <svg width="24" height="24" viewBox="0 0 75 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.592 0L74.634 64.498H0.55L37.592 0Z" fill="black"></path></svg>
+                            <svg width="24" height="24" viewBox="0 0 75 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.592 0L74.634 64.498H0.55L37.592 0Z" fill="white"></path></svg>
                              <div class="flex flex-col">
-                                <span class="font-semibold text-lg leading-tight">4SP v4</span>
-                                <span class="text-xs text-gray-500 leading-tight">Student Multi-Tool Platform</span>
+                                <span class="font-semibold text-lg leading-tight text-white" style="font-family: 'Impact', sans-serif;">4SP V5</span>
+                                <span class="text-xs text-gray-400 leading-tight">Student Multi-Tool Platform</span>
                             </div>
                         </div>
                         <div class="hidden md:flex">${navTabs}</div>
                     </div>
                     <div class="flex items-center space-x-4">
-                        <button id="login-btn" class="text-sm bg-black hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-md transition-colors">Login</button>
+                        <button id="login-btn" class="text-sm bg-white hover:bg-gray-200 text-black font-semibold py-2 px-4 rounded-md transition-colors">Login</button>
                     </div>
                 </div>
             `;
