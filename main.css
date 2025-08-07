@@ -4,10 +4,14 @@
 body {
     font-family: 'Inter', sans-serif;
     transition: margin-top 0.3s ease-in-out;
+    background-color: #111827; /* dark gray */
 }
 
 #navbar {
     transition: opacity 0.3s ease-in-out;
+    background-color: rgba(17, 24, 39, 0.8); /* semi-transparent dark gray */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #374151; /* gray-700 */
 }
 
 .navbar-container {
@@ -31,4 +35,8 @@ body {
     opacity: 1;
     transform: scale(1) translateY(0);
     pointer-events: auto; /* Allow interaction when visible */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Impact', sans-serif;
 }
