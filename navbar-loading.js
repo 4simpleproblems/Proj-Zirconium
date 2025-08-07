@@ -87,18 +87,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="flex items-center space-x-4 sm:space-x-8">
                         <div class="flex items-center space-x-3">
                             <svg width="24" height="24" viewBox="0 0 75 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.592 0L74.634 64.498H0.55L37.592 0Z" fill="black"></path></svg>
-                            <span class="font-semibold text-lg">4SP</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-lg leading-tight">4SP v4</span>
+                                <span class="text-xs text-gray-500 leading-tight">Student Multi-Tool Platform</span>
+                            </div>
                         </div>
                         <div class="hidden md:flex">${navTabs}</div>
                     </div>
                     <div class="relative">
                         <button id="account-button" class="w-9 h-9 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors">
-                           U
+                           S
                         </button>
                         <div id="account-menu" class="account-menu menu-hidden absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
                             <div class="px-4 py-3 border-b border-gray-200">
-                                <p class="text-sm font-semibold text-gray-800 truncate">user@example.com</p>
-                                <p class="text-xs text-gray-500">Username</p>
+                                <p class="text-sm font-semibold text-gray-800 truncate">student@school.edu</p>
+                                <p class="text-xs text-gray-500">StudentUsername</p>
                             </div>
                             <div class="px-4 py-2 text-xs text-gray-500 border-b border-gray-200">
                                 Joined on Aug 07, 2025
@@ -119,7 +122,10 @@ document.addEventListener('DOMContentLoaded', function () {
                      <div class="flex items-center space-x-4 sm:space-x-8">
                         <div class="flex items-center space-x-3">
                             <svg width="24" height="24" viewBox="0 0 75 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.592 0L74.634 64.498H0.55L37.592 0Z" fill="black"></path></svg>
-                            <span class="font-semibold text-lg">4SP</span>
+                             <div class="flex flex-col">
+                                <span class="font-semibold text-lg leading-tight">4SP v4</span>
+                                <span class="text-xs text-gray-500 leading-tight">Student Multi-Tool Platform</span>
+                            </div>
                         </div>
                         <div class="hidden md:flex">${navTabs}</div>
                     </div>
