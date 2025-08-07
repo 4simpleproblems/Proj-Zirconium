@@ -1,42 +1,127 @@
 /* main.css */
 @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
 
+:root {
+    /* Font Families */
+    --font-primary: 'Impact', sans-serif;
+    --font-secondary: 'Roboto Mono', monospace;
+
+    /* Light Theme Colors */
+    --bg-primary-light: #F5F5F5; /* Very light grey */
+    --bg-secondary-light: #EAEAEA;
+    --text-primary-light: #2A2A2A; /* Lightish black */
+    --text-secondary-light: #555555;
+    --border-light: #DCDCDC;
+    --accent-light: #000000;
+    --accent-text-light: #FFFFFF;
+
+    /* Dark Theme Colors */
+    --bg-primary-dark: #2A2A2A; /* Lightish black */
+    --bg-secondary-dark: #3A3A3A;
+    --text-primary-dark: #EAEAEA; /* Very light grey */
+    --text-secondary-dark: #AAAAAA;
+    --border-dark: #4A4A4A;
+    --accent-dark: #FFFFFF;
+    --accent-text-dark: #000000;
+}
+
+/* Apply theme variables */
 body {
-    font-family: 'Inter', sans-serif;
-    transition: margin-top 0.3s ease-in-out;
-    background-color: #111827; /* dark gray */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body.light-mode {
+    background-color: var(--bg-primary-light);
+    color: var(--text-primary-light);
+}
+
+body.dark-mode {
+    background-color: var(--bg-primary-dark);
+    color: var(--text-primary-dark);
+}
+
+.primary-font { font-family: var(--font-primary); }
+.secondary-font { font-family: var(--font-secondary); }
+
+/* Component Styling with Variables */
 #navbar {
-    transition: opacity 0.3s ease-in-out;
-    background-color: rgba(17, 24, 39, 0.8); /* semi-transparent dark gray */
+    transition: background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #374151; /* gray-700 */
 }
 
-.navbar-container {
-    max-width: 1400px;
-    margin: 0 auto;
+.light-mode #navbar {
+    background-color: rgba(245, 245, 245, 0.8);
+    border-bottom: 1px solid var(--border-light);
 }
 
-/* Styles for the account dropdown menu */
+.dark-mode #navbar {
+    background-color: rgba(42, 42, 42, 0.8);
+    border-bottom: 1px solid var(--border-dark);
+}
+
+#main-content p {
+    color: var(--text-secondary-light);
+}
+
+.dark-mode #main-content p {
+    color: var(--text-secondary-dark);
+}
+
+/* Reusable animated link/button style */
+.nav-link {
+    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+.light-mode .nav-link { color: var(--text-secondary-light); }
+.dark-mode .nav-link { color: var(--text-secondary-dark); }
+.light-mode .nav-link:hover { background-color: var(--bg-secondary-light); color: var(--text-primary-light); }
+.dark-mode .nav-link:hover { background-color: var(--bg-secondary-dark); color: var(--text-primary-dark); }
+
+/* Account Menu */
 .account-menu {
     transition: opacity 0.2s ease-out, transform 0.2s ease-out;
     transform-origin: top right;
 }
+.light-mode .account-menu { background-color: var(--bg-primary-light); border: 1px solid var(--border-light); }
+.dark-mode .account-menu { background-color: var(--bg-primary-dark); border: 1px solid var(--border-dark); }
 
 .menu-hidden {
     opacity: 0;
     transform: scale(0.95) translateY(-10px);
-    pointer-events: none; /* Prevent interaction when hidden */
+    pointer-events: none;
 }
 
 .menu-visible {
     opacity: 1;
     transform: scale(1) translateY(0);
-    pointer-events: auto; /* Allow interaction when visible */
+    pointer-events: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Impact', sans-serif;
+/* Login/Logout/Settings Buttons */
+.btn-primary {
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 600;
 }
+.light-mode .btn-primary { background-color: var(--accent-light); color: var(--accent-text-light); }
+.dark-mode .btn-primary { background-color: var(--accent-dark); color: var(--accent-text-dark); }
+.light-mode .btn-primary:hover { background-color: #333; }
+.dark-mode .btn-primary:hover { background-color: #DDD; }
+
+.menu-item {
+    transition: background-color 0.2s ease;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px;
+}
+.light-mode .menu-item:hover { background-color: var(--bg-secondary-light); }
+.dark-mode .menu-item:hover { background-color: var(--bg-secondary-dark); }
+
+.theme-switcher button.active {
+    font-weight: bold;
+}
+.light-mode .theme-switcher button.active { color: var(--accent-light); }
+.dark-mode .theme-switcher button.active { color: var(--accent-dark); }
