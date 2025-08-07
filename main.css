@@ -1,0 +1,16 @@
+/* main.css */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: margin-top 0.3s ease-in-out;
+}
+
+#navbar {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
